@@ -445,4 +445,32 @@ section {
  font-family: 'Times New Roman', sans-serif;
 }
 
+/* ---- Contact ---- */
+.contact-box {
+  border: 3px solid #1093ff;
+  border-radius: 20px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  max-width: 600px;
+  font-family: 'Poppins', sans-serif; /* default font for form */
+}
+
+.contact-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1093ff;
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif; /* elegant font for title */
+}
+
+/* Inputs font style */
+.contact-box input,
+.contact-box textarea {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #333;
+}
+
+
+
 
