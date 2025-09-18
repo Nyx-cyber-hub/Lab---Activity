@@ -1,0 +1,448 @@
+/* =========================
+   Student Portfolio Styles
+   ========================= */
+
+/* ---- Base / Reset ---- */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #111;
+}
+
+/* Theme color + navbar height */
+:root {
+  --main-color: #1093ff;
+  --navbar-height: 80px;
+}
+
+/* ---- Logo ---- */
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff !important;
+}
+
+/* ---- Navbar ---- */
+.navbar {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+}
+
+/* Navbar links */
+.navbar .nav-link,
+.navbar .nav-link.btn {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #fff !important;
+  padding: .45rem .75rem;
+  transition: background-color .18s ease, border-color .18s ease, transform .12s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Active link - solid blue */
+.navbar .nav-link.active {
+  background-color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+  color: #fff !important;
+  border-radius: 6px;
+}
+
+/* Active link stays blue even on hover */
+.navbar .nav-link.active:hover,
+.navbar .nav-link.active:focus {
+  background-color: var(--main-color) !important;
+  color: #fff !important;
+}
+
+/* ---- Hero Section ---- */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  color: #fff;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0 0 .5rem 0;
+}
+.hero .name {
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+}
+.hero .role {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--main-color);
+  margin-top: .25rem;
+}
+
+/* Hero Image */
+.hero-img img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 5px solid var(--main-color);
+  object-fit: cover;
+}
+
+/* decorative circles */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(16,147,255,0.12);
+  z-index: 0;
+}
+.hero::before {
+  width: 300px;
+  height: 300px;
+  top: -50px;
+  left: -100px;
+}
+.hero::after {
+  width: 200px;
+  height: 200px;
+  bottom: 50px;
+  right: -80px;
+}
+
+/* ---- Sections ---- */
+section {
+  min-height: 100vh;  /* fixed: hindi na putol kahit madami content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* para hindi laging gitna */
+  text-align: center;
+  padding: 60px 20px;
+  margin: 0;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---- About ---- */
+#about h2,
+#skills h2,
+#projects h2,
+#contact h2 {
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 1rem;
+}
+.about-box {
+  border: 3px solid #007BFF;
+  border-radius: 50px;
+  padding: 30px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  background: rgba(255,255,255,0.95);
+}
+
+/* ---- Skills ---- */
+.skill-box {
+  padding: 20px;
+  border: 2px solid var(--main-color, #ccc);
+  border-radius: 10px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  transition: transform .18s ease, box-shadow .18s ease;
+  height: 150px;              /* uniform height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.skill-box img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.skill-box p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* ---- Projects ---- */
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+.card-img-top {
+  object-fit: cover;
+  height: 220px;
+  width: 100%;
+}
+.card-body {
+  padding: 15px;
+}
+
+/* ---- Social Icons ---- */
+.social-icons a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+/* ---- Background Images ---- */
+#about { background-image: url('images/white_bg.jpg'); }
+#skills { background-image: url('images/white_bg.jpg'); }
+#projects { background-image: url('images/white_bg.jpg'); }
+#contact { background-image: url('images/white_bg.jpg'); }
+
+/* ---- Responsive ---- */
+@media (max-width: 991.98px) {
+  :root { --navbar-height: 64px; }
+  .hero-img { max-width: 220px; }
+  .skill-box {
+    height: auto; /* responsive */
+    padding: 15px;
+  }
+}
+
+/* ---- Send Message Button ---- */
+.btn-send {
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  color: #fff !important;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.btn-send:hover,
+.btn-send:focus,
+.btn-send:active {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: #fff !important;
+  box-shadow: none;
+}
+
+/* ---- Logo Circle ---- */
+.logo-circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ---- Navbar Font ---- */
+.navbar,
+.navbar .navbar-brand,
+.navbar .nav-link {
+  font-family: "Times New Roman", serif !important;
+  font-weight: bold !important;
+}
+
+/* ---- Home Banschrift Text ---- */
+#home p {
+  font-family: 'Banschrift', sans-serif;
+}
+
+.percent-label {
+  background-color: #1093ff; /* light blue */
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-left: 6px;
+}
+
+.badge-box {
+  width: 120px; /* pantay na box */
+  margin: 10px;
+}
+
+.badge-icon {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.badge-icon:hover {
+  transform: scale(1.08);
+}
+
+.badge-name {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 6px;
+  color: #333;
+  word-wrap: break-word; /* para hindi sumabog kapag mahaba text */
+}
+
+/* ---- About Section Fix ---- */
+.about-box {
+  border: 3px solid #007BFF;
+  border-radius: 20px;
+  padding: 25px;
+  height: 100%; /* para pantay yung box */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+}
+
+/* Titles */
+.about-box h3 {
+  font-family: "Georgia", serif;
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: #007BFF;
+  margin-bottom: 15px;
+}
+
+/* Microsoft badges */
+/* Microsoft badges */
+.badge-box {
+  width: 140px; 
+  margin: 10px;
+  text-align: center;
+}
+
+.badge-icon {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.badge-icon:hover {
+  transform: scale(1.08);
+}
+
+.badge-name {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 6px;
+  color: #333;
+  word-wrap: break-word;
+}
+
+/* Certificate Title (same style as About Me / Achievements) */
+.cert-title {
+  font-size: 1.5rem;   /* same size as Achievements / About Me */
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #111;
+  text-align: center;
+}
+
+.certificate-icon {
+  width: 200px; /* adjust size as needed */
+  display: block;
+  margin: 0 auto 8px auto; /* auto left-right para center */
+}
+
+.badge-name {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 6px;
+  color: #333;
+  text-align: center !important;
+}
+
+.card-body h5 {
+  font-family: 'Georgia', serif;   /* palitan mo ng gusto mong font */
+  font-weight: bold;
+  color: #1093ff;                  /* custom color (blue sample) */
+  font-size: 1.1rem;               /* para naka h5 pa rin pero mas refined */
+  margin-bottom: 10px;
+}
+
+.about-box p {
+  text-align: justify;
+  line-height: 1.6; /* dagdag spacing para mas madaling basahin */
+}
+
+.personal-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.personal-info b {
+ margin: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.info-icon {
+  margin-right: 6px;
+  color: #1093ff; /* kulay blue para modern look */
+}
+
+.badge-intro {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 6px;
+  color: #333;
+  text-align: center !important;
+ font-family: 'Times New Roman', sans-serif;
+}
+
+

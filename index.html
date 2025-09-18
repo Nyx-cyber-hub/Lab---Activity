@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Others -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+    .navbar .nav-link.active {
+      background-color: #0d6efd;
+      color: white !important;
+      border-radius: 5px;
+    }
+    .hero {
+      min-height: 100vh;
+      background: #222;
+      color: white;
+      padding-top: 100px;
+    }
+    .hero-img {
+      max-width: 300px;
+      border: 5px solid #fff;
+    }
+    .about-box {
+      border: 2px solid #0d6efd;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 800px;
+    }
+    .skill-box {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .skill-box:hover {
+      transform: scale(1.05);
+    }
+    .skill-box img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+    section {
+      padding-top: 80px;
+    }
+  </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="80" tabindex="0">
+  
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <div class="logo-circle">PNJ</div>
+    <a class="navbar-brand logo" href="#">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main wrapper -->
+<main id="main-content">
+
+<!-- Hero Section -->
+<section class="hero d-flex align-items-center" id="home">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Text -->
+      <div class="col-md-6">
+        <h1>Hi, I'm <span class="name">Nichole</span></h1>
+        <h2 class="role">IT Student</h2>
+        <p>“A passionate young web designer with a strong eye for detail and creativity, dedicated to crafting modern, user-friendly, and visually stunning websites.”</p>
+
+        <div class="social-icons mb-3">
+          <a href="https://www.facebook.com/princessnichole.jordan.7" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://github.com/Nyx-cyber-hub" target="_blank"><i class="bi bi-github"></i></a>
+          <a href="https://www.instagram.com/nicolearquillo1" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="phone-icon"><i class="bi bi-telephone-fill"></i></a>
+        </div>
+
+        <a href="#" class="btn btn-outline-light">Motto in Life | Code. Learn. Improve.</a>
+      </div>
+      <!-- Image -->
+      <div class="col-md-6 text-center">
+        <img src="images/nics.jpg" alt="Nichole" class="img-fluid rounded-circle hero-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Number Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">📞 Contact Number</h5>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 1.3rem; font-weight: 600; color: #1093ff;">+63 981 225 2406</p>
+        <p style="font-size: 1.3rem; font-weight: 600; color: #1093ff;">+63 994 499 5616</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Section -->
+<section id="about" class="page-section">
+  <div class="container">
+    <h2 class="text-center mb-4">About Me and Achievements</h2>
+    <div class="row align-items-stretch">
+      
+      <!-- About Me (left side) -->
+      <div class="col-md-6 d-flex">
+        <div class="about-box w-100">
+          <h3 class="about-title">About Me</h3>
+
+          <!-- Personal Info -->
+          <div class="personal-info text-start mb-3">
+            <p><i class="fas fa-user info-icon"></i> <b>Name:</b> Princess Nichole Jordan</p>
+            <p><i class="fas fa-birthday-cake info-icon"></i> <b>Age:</b> 20</p>
+            <p><i class="fas fa-graduation-cap info-icon"></i> <b>Course:</b> Bachelor of Science in Information Technology</p>
+            <p><i class="fas fa-laptop-code info-icon"></i> <b>Major:</b> Network Technology</p>
+            <p><i class="fas fa-map-marker-alt info-icon"></i> <b>Address:</b> Rosario, Batangass, Philippines</p>
+          </div>
+
+          <!-- Main About Text -->
+          <p>
+            I am a passionate web designer who loves creating visually appealing and 
+            user-friendly websites, focusing on clean design, responsive layouts, and modern UI/UX principles. 
+            As an IT student, I combine creativity with technical knowledge in web designing and programming to 
+            build digital experiences that are both functional and engaging. My growing expertise in coding and 
+            web development allows me to explore different programming languages and frameworks, while my dedication 
+            to continuous learning drives me to develop innovative solutions that reflect my growth as a future IT professional.
+          </p>
+          <p>Beyond my technical skills, I value collaboration, adaptability, and continuous improvement. 
+            I enjoy working with teams where ideas can grow and transform into real projects, and 
+            I believe that good communication is as important as strong coding practices. 
+            My goal is to use my knowledge in technology to create solutions that not only solve 
+            problems but also make people’s lives easier. In the future, I aspire to contribute to innovative projects in web and 
+            software development while continuing to expand my skills and stay updated with the fast-paced world of technology.</p>
+        </div>
+      </div>
+      
+        <!-- Achievements (right side) -->
+        <div class="col-md-6">
+          <div class="about-box">
+            <h3>Achievements</h3>
+            <p class="badge-intro">Here are my Microsoft certification badges:</p>
+            <!-- Microsoft Badges Row -->
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <!-- Microsoft Badge 1 -->
+              <div class="badge-box text-center">
+                <img src="images/microsoft-badge1.jpg" alt="Azure Fundamentals" class="badge-icon">
+                <p class="badge-name">Deploy a Spring Boot app to Azure App Service</p>
+              </div>
+
+              <!-- Microsoft Badge 2 -->
+              <div class="badge-box text-center">
+                <img src="images/microsoft-badge2.jpg" alt="Security Compliance Identity" class="badge-icon">
+                <p class="badge-name">Choose the right Azure service for deploying your Java application</p>
+              </div>
+
+              <!-- Microsoft Badge 3 -->
+              <div class="badge-box text-center">
+                <img src="images/microsoft-badge3.jpg" alt="Power Platform" class="badge-icon">
+                <p class="badge-name">Introduction to Java on Azure</p>
+              </div>
+            </div>
+
+             <!-- CodeChum Certificate Solo -->
+            <div class="text-center mx-auto mt-4">
+              <h3 class="cert-title">Certificate</h3>
+              <img src="images/codechum.png" alt="CodeChum Certificate" class="certificate-icon">
+              <p class="badge-name">CodeChum Certificate</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Skills -->
+<section id="skills" class="py-5 page-section">
+  <div class="container">
+    <h2 class="text-center mb-4">Skills</h2>
+
+<!-- First Row -->
+    <div class="row text-center mb-4">
+      <div class="col-md-3">
+        <div class="skill-box">
+          <div class="icon-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"></div>
+          <p>HTML | </span> <span class="percent-label">80%</span></p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="skill-box">
+          <div class="icon-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"></div>
+          <p>CSS | </span> <span class="percent-label">80%</span></p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="skill-box">
+          <div class="icon-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"></div>
+          <p>Bootstrap | </span> <span class="percent-label">80%</span></p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="skill-box">
+          <div class="icon-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"></div>
+          <p>JavaScript | </span> <span class="percent-label">80%</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="row text-center mb-4">
+      <div class="col-md-3">
+        <div class="skill-box">
+          <div class="icon-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"></div>
+          <p>PHP | </span> <span class="percent-label">80%</span></p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="skill-box">
+          <div class="icon-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"></div>
+          <p>C++ | </span> <span class="percent-label">85%</span></p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="skill-box">
+          <div class="icon-box"><img src="https://cdn-icons-png.flaticon.com/512/732/732221.png"></div>
+          <p>Microsoft | </span> <span class="percent-label">85%</span></p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="skill-box">
+          <div class="icon-box"><img src="images/ui_ux.png"></div>
+          <p>UI/UX | </span> <span class="percent-label">85%</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Row -->
+    <div class="row text-center">
+      <div class="col-md-3">
+        <div class="skill-box">
+          <div class="icon-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"></div>
+          <p>Java | </span> <span class="percent-label">75%</span></p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="skill-box">
+          <div class="icon-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"></div>
+          <p>Python | </span> <span class="percent-label">75%</span></p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="skill-box">
+          <div class="icon-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"></div>
+          <p>MySQL | </span> <span class="percent-label">70%</span></p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="skill-box">
+          <div class="icon-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"></div>
+          <p>GitHub | </span> <span class="percent-label">85%</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="py-5 bg-light page-section">
+  <div class="container">
+    <h2 class="text-center mb-4">Projects</h2>
+    <div class="row g-4">
+
+      <!-- Project One -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="images/scholarly.png" class="card-img-top" alt="Project One">
+          <div class="card-body text-center">
+            <h5><b>Project One</b></h5>
+            <p>“Scholarly is a platform where users can ask questions, share knowledge, and exchange ideas in a structured and interactive way.”</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Two -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="images/project1.png" class="card-img-top" alt="Project Two">
+          <div class="card-body text-center">
+            <h5><b>Project Two</b></h5>
+            <p>“An Introductory coding program about myself that shows the use of different HTML text formatting techniques.”</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Three -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="images/project2.png" class="card-img-top" alt="Project Three">
+          <div class="card-body text-center">
+            <h5><b>Project Three</b></h5>
+            <p>“A coding program showcasing a Barbie Movie Collection using tables and rows.”</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Four -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100">
+          <img src="images/project3.png" class="card-img-top" alt="Project Four">
+          <div class="card-body text-center">
+            <h5><b>Project Four</b></h5>
+            <p>“A coding program for a Harry Potter–themed web portal developed using Bootstrap.”</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Contact -->
+<section id="contact" class="py-5 page-section">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Me</h2>
+    <form class="col-md-8 mx-auto">
+      <div class="mb-3"><input type="text" class="form-control" placeholder="Your Name" required></div>
+      <div class="mb-3"><input type="email" class="form-control" placeholder="Your Email" required></div>
+      <div class="mb-3"><textarea class="form-control" rows="4" placeholder="Your Message" required></textarea></div>
+      <button type="submit" class="btn btn-send">Send Message</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p>© 2025 Nichole | All Rights Reserved</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS for Active Navbar -->
+<script>
+const navLinks = document.querySelectorAll('.navbar .nav-link');
+
+// Remove active class from all links
+function clearActiveLinks() {
+  navLinks.forEach(link => link.classList.remove('active'));
+}
+
+// Update active link based on section in the middle of viewport
+function updateActiveLinkOnScroll() {
+  const middleOfScreen = window.scrollY + window.innerHeight / 2;
+
+  let found = false;
+  navLinks.forEach(link => {
+    const section = document.querySelector(link.getAttribute('href'));
+    if (!section) return;
+
+    const sectionTop = section.offsetTop;
+    const sectionBottom = section.offsetTop + section.offsetHeight;
+
+    if (middleOfScreen >= sectionTop && middleOfScreen < sectionBottom) {
+      if (!link.classList.contains('active')) {
+        clearActiveLinks();
+        link.classList.add('active');
+      }
+      found = true;
+    }
+  });
+
+  // If no section found (top of page), default to Home
+  if (!found) {
+    clearActiveLinks();
+    const homeLink = document.querySelector('.navbar .nav-link[href="#home"]');
+    homeLink.classList.add('active');
+  }
+}
+
+// On page load
+window.addEventListener('load', () => {
+  clearActiveLinks();
+  const homeLink = document.querySelector('.navbar .nav-link[href="#home"]');
+  homeLink.classList.add('active');
+
+  const homeSection = document.getElementById('home');
+  if (homeSection) homeSection.scrollIntoView({ behavior: 'auto' });
+
+  updateActiveLinkOnScroll();
+});
+
+// Click handler
+navLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    clearActiveLinks();
+    this.classList.add('active');
+
+    const targetId = this.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+// Scroll handler
+window.addEventListener('scroll', updateActiveLinkOnScroll);
+
+// ✅ Contact form handler
+const contactForm = document.querySelector('#contact form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent reload
+
+    const nameInput = this.querySelector('input[type="text"]');
+    const name = nameInput ? nameInput.value : 'User';
+
+    // Show thank you alert
+    alert(`Thank you, ${name}! Your message has been sent.`);
+
+    // Clear form
+    this.reset();
+  });
+}
+</script>
+
+</body>
+</html>
